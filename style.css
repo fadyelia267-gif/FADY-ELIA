@@ -1,0 +1,287 @@
+/* الألوان الأساسية المستوحاة من اللوجو الفخم */
+:root {
+    --bg-color: #0d0d0d;       /* الأسود الفاخر للخلفية */
+    --card-bg: #1a1a1a;        /* الرمادي الغامق للكروت */
+    --gold: #d4af37;           /* الذهبي اللامع للعنوان واللمسات */
+    --silver: #e5e5e5;         /* الفضي المعدني للنصوص المساعدة */
+    --text-color: #ffffff;     /* الأبيض للنصوص الرئيسية */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* الهيدر والقائمة */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(13, 13, 13, 0.95);
+    border-bottom: 1px solid #2a2a2a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1px;
+}
+
+header .logo span {
+    color: var(--silver);
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.nav-btn {
+    background: linear-gradient(45deg, var(--gold), #aa8513);
+    color: #000 !important;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* قسم الـ Hero الرئيسي */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background: radial-gradient(circle, #222 0%, var(--bg-color) 70%);
+}
+
+.hero .badge {
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--silver);
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #aaa;
+    font-size: 16px;
+}
+
+.hero-btns .btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--gold), #aa8513);
+    color: #000;
+}
+
+.btn-secondary {
+    border: 2px solid var(--silver);
+    color: var(--silver);
+}
+
+.btn-secondary:hover {
+    background-color: var(--silver);
+    color: #000;
+}
+
+/* الأقسام العامة */
+section {
+    padding: 80px 5%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #888;
+}
+
+/* شبكة الخدمات */
+.services-grid, .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 10px;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.service-card .icon {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: var(--silver);
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* معرض الأعمال */
+.portfolio-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #222;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 200px;
+    background-color: #2a2a2a; /* خلفية مؤقتة للصور */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+}
+
+.portfolio-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-info {
+    padding: 20px;
+}
+
+.portfolio-info h4 {
+    color: var(--gold);
+    margin-bottom: 5px;
+}
+
+.portfolio-info p {
+    color: #888;
+    font-size: 13px;
+}
+
+/* أزرار التواصل */
+.contact {
+    text-align: center;
+}
+
+.contact-box {
+    background-color: var(--card-bg);
+    padding: 50px 30px;
+    border-radius: 15px;
+    border: 1px solid var(--gold);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-box h2 {
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-buttons .btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.whatsapp-btn {
+    background-color: #25d366;
+}
+
+.facebook-btn {
+    background-color: #1877f2;
+}
+
+.contact-buttons .btn:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
+/* الفوتر */
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #222;
+    color: #555;
+    font-size: 13px;
+}
